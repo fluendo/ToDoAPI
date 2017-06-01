@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using TodoApi.Models;
 
 namespace ToDo.Core.ViewModels.Services.Interfaces
 {
-    public interface ICacheService
+    public interface INetworking
     {
         Task<bool> Add(TodoItem item);
 
@@ -13,6 +16,5 @@ namespace ToDo.Core.ViewModels.Services.Interfaces
         Task<IEnumerable<TodoItem>> All();
 
         Task<bool> Update(TodoItem item);
-        
     }
 }
