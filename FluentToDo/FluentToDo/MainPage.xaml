@@ -11,7 +11,7 @@
                         <MenuItem Text="Delete" Command="{Binding CommandDelete}"/>
                     </ViewCell.ContextActions>
                     
-                    <Label Text="{Binding Name}"/>
+                    <Label Text="{Binding Item.Name}"/>
                     <Switch IsToggled="{Binding IsCompleted}"/>
                 </ViewCell>
             </DataTemplate>

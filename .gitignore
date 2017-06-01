@@ -14,3 +14,5 @@
 /ToDo.Core.ViewModels/obj/Debug
 /ToDo.Server/bin/Debug
 /ToDo.Server/obj/x86/Debug
+/FluentToDo.Console/obj/Debug
+/FluentToDo.WPF/obj/Debug

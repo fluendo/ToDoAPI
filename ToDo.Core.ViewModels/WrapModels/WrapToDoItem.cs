@@ -10,6 +10,14 @@ namespace ToDo.Core.ViewModels.WrapModels
         private MainViewModel _mainViewModel;
         private TodoItem _todoItem;
 
+        public TodoItem Item
+        {
+            get
+            {
+                return _todoItem;
+            }
+        }
+
         public WrapToDoItem(MainViewModel mainViewModel, TodoItem todoItem)
         {
             _mainViewModel = mainViewModel;
