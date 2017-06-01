@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -62,11 +62,8 @@
     <Compile Include="Controllers\TodoController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\ToDo.Core\ToDo.Core.csproj">
-      <Project>{042BBC29-C2AE-4DE9-96D1-EF01281D5C70}</Project>
+      <Project>{fb54b934-1538-43df-b63e-e4ee1e1825be}</Project>
       <Name>ToDo.Core</Name>
     </ProjectReference>
   </ItemGroup>

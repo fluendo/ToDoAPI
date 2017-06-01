@@ -1,0 +1,16 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/FluentToDo/FluentToDo/obj/Debug
+/.vs/TodoApi
+/FluentToDo/FluentToDo.Android/obj/Debug
+/FluentToDo/FluentToDo.Android/Resources/Resource.Designer.cs
+/FluentToDo/FluentToDo.iOS/obj/iPhone/Debug
+/FluentToDo/FluentToDo.UWP/obj/x86/Debug
+/packages
+/ToDo.Core/bin/Debug
+/ToDo.Core/obj/Debug
+/ToDo.Core.ViewModels/obj/Debug
+/ToDo.Server/bin/Debug
+/ToDo.Server/obj/x86/Debug
