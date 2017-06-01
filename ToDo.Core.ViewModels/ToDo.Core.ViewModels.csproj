@@ -44,6 +44,7 @@
     <Compile Include="Services\Interfaces\ICacheService.cs" />
     <Compile Include="Services\Interfaces\INavigationService.cs" />
     <Compile Include="Services\ViewToViewModelLocator.cs" />
+    <Compile Include="WrapModels\WrapToDoItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

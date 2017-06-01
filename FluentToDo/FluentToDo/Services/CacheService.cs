@@ -10,5 +10,10 @@ namespace FluentToDo.Services
         {
             //TODO: To implement
         }
+
+        public void Delete(TodoItem item)
+        {
+            //TODO: To implement
+        }
     }
 }

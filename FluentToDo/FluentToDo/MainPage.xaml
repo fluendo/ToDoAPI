@@ -7,6 +7,10 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem Text="Delete" Command="{Binding CommandDelete}"/>
+                    </ViewCell.ContextActions>
+                    
                     <Label Text="{Binding Name}"/>
                     <Switch IsToggled="{Binding IsComplete}"/>
                 </ViewCell>
