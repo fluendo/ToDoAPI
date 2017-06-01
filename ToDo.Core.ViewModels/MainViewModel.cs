@@ -23,16 +23,18 @@ namespace ToDo.Core.ViewModels
             set { _todoItems = value; Raise(); }
         }
 
-        public ICommand CommandOnInit
+        public ICommand CommandRefresh
         {
             get
             {
                 return new Command(() =>
-                {                    
+                {
+                    IsBusy = true;
                     foreach(var itemWrapped in CacheService.All().Select(x => new WrapToDoItem(this, x)))
                     {
                         TodoItems.Add(itemWrapped);
                     }
+                    IsBusy = false;
                 });
             }
         }

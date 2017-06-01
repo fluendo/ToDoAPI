@@ -24,6 +24,15 @@ namespace ToDo.Core.ViewModels.Base
             get { return _cacheService; }
         }
 
+        private bool _isBusy;
+
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set { _isBusy = value; Raise(); }
+        }
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
