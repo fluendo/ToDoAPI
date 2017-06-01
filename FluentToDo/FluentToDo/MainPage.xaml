@@ -12,7 +12,7 @@
                     </ViewCell.ContextActions>
                     
                     <Label Text="{Binding Name}"/>
-                    <Switch IsToggled="{Binding IsComplete}"/>
+                    <Switch IsToggled="{Binding IsCompleted}"/>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>

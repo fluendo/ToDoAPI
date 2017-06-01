@@ -1,9 +1,11 @@
-﻿using System.Windows.Input;
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
 using TodoApi.Models;
 
 namespace ToDo.Core.ViewModels.WrapModels
 {
-    public class WrapToDoItem 
+    public class WrapToDoItem : INotifyPropertyChanged
     {
         private MainViewModel _mainViewModel;
         private TodoItem _todoItem;
@@ -13,6 +15,18 @@ namespace ToDo.Core.ViewModels.WrapModels
             _mainViewModel = mainViewModel;
             _todoItem = todoItem;
         }
+        
+        public bool IsCompleted
+        {
+            get { return _todoItem.IsComplete; }
+            set
+            {
+                _todoItem.IsComplete = value;
+                Raise();
+                _mainViewModel?.CommandUpdate(_todoItem);
+            }
+        }
+
 
         public ICommand CommandDelete
         {
@@ -25,5 +39,12 @@ namespace ToDo.Core.ViewModels.WrapModels
             }
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void Raise([CallerMemberName] string property = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+        }
     }
 }
+

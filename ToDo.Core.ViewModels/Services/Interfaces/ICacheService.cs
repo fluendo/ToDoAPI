@@ -10,6 +10,8 @@ namespace ToDo.Core.ViewModels.Services.Interfaces
         void Delete(TodoItem item);
 
         IEnumerable<TodoItem> All();
+
+        void Update(TodoItem item);
         
     }
 }

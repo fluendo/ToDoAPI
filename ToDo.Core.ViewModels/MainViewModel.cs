@@ -59,5 +59,16 @@ namespace ToDo.Core.ViewModels
                 });
             }
         }
+
+        public ICommand CommandUpdate
+        {
+            get
+            {
+                return new Command<TodoItem>((todoItem) =>
+                {
+                    CacheService.Update(todoItem);
+                });
+            }
+        }
+
     }
-}
