@@ -27,10 +27,11 @@ namespace ToDo.Core.ViewModels
         {
             get
             {
-                return new Command(() =>
+                return new Command(async () =>
                 {
                     IsBusy = true;
-                    foreach(var itemWrapped in CacheService.All().Select(x => new WrapToDoItem(this, x)))
+                    var elements = await CacheService.All();
+                    foreach (var itemWrapped in elements.Select(x => new WrapToDoItem(this, x)))
                     {
                         TodoItems.Add(itemWrapped);
                     }
@@ -74,3 +75,4 @@ namespace ToDo.Core.ViewModels
         }
 
     }
+}

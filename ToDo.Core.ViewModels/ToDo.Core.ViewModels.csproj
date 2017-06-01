@@ -45,6 +45,7 @@
     <Compile Include="Services\Interfaces\ICacheService.cs" />
     <Compile Include="Services\Interfaces\INavigationService.cs" />
     <Compile Include="Services\Interfaces\INetworking.cs" />
+    <Compile Include="Services\Interfaces\IServiceLocator.cs" />
     <Compile Include="Services\Networking.cs" />
     <Compile Include="Services\ViewToViewModelLocator.cs" />
     <Compile Include="WrapModels\WrapToDoItem.cs" />
