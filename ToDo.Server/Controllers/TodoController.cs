@@ -44,10 +44,10 @@ namespace TodoApi.Controllers
 				return BadRequest();
 			}
 			TodoItems.Add(item);
-			return CreatedAtRoute("GetTodo", new { id = item.Key }, item);
-		}
+            return CreatedAtRoute("DefaultApi", new { id = item.Key }, item);
+        }
 
-		[HttpPut]
+        [HttpPut]
 		[Route("{id}")]
 		public IHttpActionResult Update(string id, [FromBody] TodoItem item)
 		{
