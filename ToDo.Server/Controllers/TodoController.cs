@@ -44,29 +44,30 @@ namespace TodoApi.Controllers
 				return BadRequest();
 			}
 			TodoItems.Add(item);
-			return CreatedAtRoute("GetTodo", new { id = item.Key }, item);
-		}
+            return CreatedAtRoute("DefaultApi", new { id = item.Key }, item);
+        }
 
+        /// <summary>
+        /// Update the given item using the default PUT route
+        /// </summary>
+        /// <param name="item">the item to update with the modified data</param>
+        /// <returns>200 OK if success</returns>
 		[HttpPut]
-		[Route("{id}")]
-		public IHttpActionResult Update(string id, [FromBody] TodoItem item)
-		{
-			if (item == null || item.Key != id)
-			{
-				return BadRequest();
-			}
+        [Route("{id}")]
+        public IHttpActionResult Update([FromBody] TodoItem item)
+        {
+            if (item == null)
+                return BadRequest();
 
-			var todo = TodoItems.Find(id);
-			if (todo == null)
-			{
-				return NotFound();
-			}
+            var todo = TodoItems.Find(item.Key);
+            if (todo == null)
+                return NotFound();
 
-			TodoItems.Update(item);
-			return Ok();
-		}
+            TodoItems.Update(item);
+            return Ok();
+        }
 
-		[HttpPut]
+        [HttpPut]
 		[Route("{id}")]
 		public IHttpActionResult Update([FromBody] TodoItem item, string id)
 		{
